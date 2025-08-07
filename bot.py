@@ -8,9 +8,12 @@ from telegram.ext import (
     CommandHandler,
     ContextTypes,
 )
+import os
 
-# Конфигурация
-BOT_TOKEN = "8477155203:AAGEM6MNjCOvxfy3htpJonJH7ATAcRkHK5I"  # Замените на реальный токен
+TOKEN = os.getenv("TELEGRAM_TOKEN")  # GitHub Actions подставит сюда секрет
+
+if not TOKEN:
+    raise ValueError("Токен не найден! Проверь Secrets в GitHub.")
 WEB_APP_URL = "https://sc0ppp.github.io/ilusha/"  # URL вашего Mini App
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -49,3 +52,4 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
