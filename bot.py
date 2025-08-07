@@ -10,7 +10,7 @@ from telegram.ext import (
 )
 import os
 
-TOKEN = os.getenv("TELEGRAM_TOKEN")  # GitHub Actions подставит сюда секрет
+TOKEN = os.getenv("BOT_TOKEN")  # GitHub Actions подставит сюда секрет
 
 if not TOKEN:
     raise ValueError("Токен не найден! Проверь Secrets в GitHub.")
@@ -52,4 +52,5 @@ def main() -> None:
 if __name__ == "__main__":
 
     main()
+
 
