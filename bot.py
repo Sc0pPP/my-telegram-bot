@@ -10,7 +10,7 @@ from telegram.ext import (
 )
 
 # Конфигурация
-BOT_TOKEN = "7675515908:AAFKocTKl6ldp0xifGGGr7R7isT-4bbnK1Y"  # Замените на реальный токен
+BOT_TOKEN = "8477155203:AAGEM6MNjCOvxfy3htpJonJH7ATAcRkHK5I"  # Замените на реальный токен
 WEB_APP_URL = "https://sc0ppp.github.io/ilusha/"  # URL вашего Mini App
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -47,4 +47,5 @@ def main() -> None:
     application.run_polling()
 
 if __name__ == "__main__":
+
     main()
